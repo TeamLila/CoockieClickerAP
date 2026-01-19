@@ -1,5 +1,5 @@
 # NOTE
-This is a Unfinished Project and in no way Ready for use. Please DO NOT ADD THIS TO YOUR ARCHIPELAGO RANDOMIZERS
+This is a Unfinished Project and in no way Ready for use. Please DO NOT ADD THIS TO YOUR ARCHIPELAGO RANDOMIZERS (Not that you can yet Anyways)
 
 
 
