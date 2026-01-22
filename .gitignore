@@ -4,3 +4,4 @@ test.*
 bak/
 *.zip
 Archipelago-main/
+__pycache__
