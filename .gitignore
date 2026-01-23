@@ -1,8 +1,15 @@
 Notes.*
 test.*
 *.bak
+*.bak2
 bak/
 *.zip
 Archipelago-main/
 __pycache__
 venv/
+host.yaml
+logs/
+
+#Block git from saving generated stuff
+Players/
+output/

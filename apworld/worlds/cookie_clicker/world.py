@@ -1,17 +1,24 @@
-from AutoWorld import World
+from worlds.AutoWorld import World
 from BaseClasses import Region
-from .locations import CookieClickerLocation, location_table
+from .locations import CookieClickerLocation, location_name_to_id
+from .items import item_name_to_id
 
 
 class CookieClickerWorld(World):
-    game = "Cookie Clicker"
-
+    #what is it internaly called?
+    game = "cookie_clicker"
+    
+    #define the id's
+    location_name_to_id = location_name_to_id
+    item_name_to_id = item_name_to_id
+    
+    topology_present = False
+    
     def create_regions(self):
-        region = Region("Menu", self.player, self.multiworld)
+        menu_region = Region("Menu", self.player, self.multiworld)
 
-        for name, loc_id in location_table.items():
-            region.locations.append(
-                CookieClickerLocation(self.player, name, loc_id, region)
-            )
+        for name, loc_id in self.location_name_to_id.items():
+            from BaseClasses import Location
+            menu_region.locations.append(Location(self.player, name, loc_id, menu_region))
 
-        self.multiworld.regions.append(region)
+        self.multiworld.regions.append(menu_region)

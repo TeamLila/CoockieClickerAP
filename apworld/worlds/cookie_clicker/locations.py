@@ -2,14 +2,14 @@ from BaseClasses import Location
 
 #Selfnote: if any Numbers get Depricated, DO NOT REUSE THEM
 class IdDefinitions():
-    BASE_ID = 2026_000_000
-    UNIT_ID = BASE_ID + 100_000
+    BASE_ID = 5191_000_000
+    UNIT_ID = BASE_ID + 10_000
 
 class CookieClickerLocation(Location):
     game = "Cookie Clicker"
 
 
-location_table = {
+location_name_to_id = {
     # name : id (THATS IT FOR NOW)
     "Buy 1 Cursor": IdDefinitions.UNIT_ID + 1,
     "Buy 1 Grandma": IdDefinitions.UNIT_ID + 2,
