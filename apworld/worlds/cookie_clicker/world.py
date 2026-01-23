@@ -2,8 +2,10 @@ from worlds.AutoWorld import World
 from BaseClasses import Region
 from .locations import CookieClickerLocation, location_name_to_id
 from .items import item_name_to_id
+from .options import CookieClickerOptions
 
 
+#Main Class
 class CookieClickerWorld(World):
     #what is it internaly called?
     game = "cookie_clicker"
@@ -11,6 +13,9 @@ class CookieClickerWorld(World):
     #define the id's
     location_name_to_id = location_name_to_id
     item_name_to_id = item_name_to_id
+    
+    #Define options
+    options_dataclass = CookieClickerOptions
     
     topology_present = False
     
