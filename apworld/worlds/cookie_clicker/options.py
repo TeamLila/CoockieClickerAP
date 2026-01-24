@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from Options import PerGameCommonOptions, Toggle, Range
 
 #SHOWCASE CLASSES HOW TO DEFINE
@@ -15,7 +15,9 @@ class StartingCookieCount(Range):
 #Option Class: for later
 @dataclass
 class CookieClickerOptions(PerGameCommonOptions):
-    Dummy_Toggle: DummyToggleClass
-    Starting_Cookies: StartingCookieCount
+    Dummy_Toggle: DummyToggleClass = field(default_factory=DummyToggleClass)
+    Starting_Cookies: StartingCookieCount = field(default_factory=StartingCookieCount)
 
-
+print("fields:", getattr(CookieClickerOptions, "__dataclass_fields__", None))
+for _ in range(0, 5):
+    print("OPTIONSOPTIONS")
